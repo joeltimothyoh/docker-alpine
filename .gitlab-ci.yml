@@ -27,7 +27,7 @@ before_script:
         docker tag "${REPOSITORY}:${VARIANT}" "${REPOSITORY}:latest";
       fi
     - docker images
-    - docker push "${REPOSITORY}:${VARIANT}"
+    - docker push "${REPOSITORY}"
 
 curl:
   variables:
