@@ -25,7 +25,7 @@ before_script:
         --build-arg IMAGE="alpine:${OS_VERSION}"
         "${CI_JOB_NAME}/"
     - if [ "${LATEST}" = true ]; then
-        docker tag "${REPOSITORY}:${VARIANT}" "${REPOSITORY}:${CI_JOB_NAME}-latest";
+        docker tag "${REPOSITORY}:${VARIANT}" "${REPOSITORY}:${CI_JOB_NAME}";
       fi
     - docker images
     - docker push "${REPOSITORY}"
