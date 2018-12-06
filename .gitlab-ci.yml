@@ -9,7 +9,7 @@ stages:
 variables:
   DOCKER_DRIVER: overlay2
   REPOSITORY: "${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}"
-  OS_VERSION: "3.8"
+  OS_VARIANT: "3.8"
 
 before_script:
   - echo $REGISTRY_PASSWORD | docker login -u $REGISTRY_USER --password-stdin
@@ -17,12 +17,12 @@ before_script:
 .build_template: &build_definition
   stage: build
   script:
-    - VARIANT="${OS_VERSION}-${CI_JOB_NAME}"
+    - VARIANT="${OS_VARIANT}-${CI_JOB_NAME}"
     - docker pull "${REPOSITORY}:${VARIANT}" || true
     - docker build
         -t "${REPOSITORY}:${VARIANT}"
         --cache-from "${REPOSITORY}:${VARIANT}"
-        --build-arg IMAGE="alpine:${OS_VERSION}"
+        --build-arg IMAGE="${CI_PROJECT_NAME}:${OS_VARIANT}"
         "${CI_JOB_NAME}/"
     - if [ "${LATEST}" = true ]; then
         docker tag "${REPOSITORY}:${VARIANT}" "${REPOSITORY}:${CI_JOB_NAME}";
