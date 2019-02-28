@@ -24,7 +24,7 @@ before_script:
         --cache-from "${REPOSITORY}:${VARIANT}"
         --build-arg IMAGE="${CI_PROJECT_NAME}:${OS_VARIANT}"
         "${CI_JOB_NAME}/"
-    - if [ "${LATEST}" = true ]; then
+    - if [ "${DEFAULT}" = true ]; then
         docker tag "${REPOSITORY}:${VARIANT}" "${REPOSITORY}:${CI_JOB_NAME}";
       fi
     - docker images
@@ -32,7 +32,7 @@ before_script:
 
 curl:
   variables:
-    LATEST: "true"
+    DEFAULT: "true"
   <<: *build_definition
 
 after_script:
