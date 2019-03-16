@@ -3,7 +3,8 @@ FROM $BASE_IMAGE
 
 RUN apk update \
     && apk add --no-cache \
-        curl \
+        git \
+        openssh \
     && rm -rf /var/cache/apk/*
 
 CMD ["/bin/sh"]

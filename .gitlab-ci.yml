@@ -37,3 +37,13 @@ curl:
   variables:
     DEFAULT: "true"
   <<: *build_definition
+
+git:
+  variables:
+    DEFAULT: "true"
+  <<: *build_definition
+
+git-ssh:
+  variables:
+    DEFAULT: "true"
+  <<: *build_definition
