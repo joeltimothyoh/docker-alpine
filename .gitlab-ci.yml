@@ -28,8 +28,13 @@ variables:
     - if [ "${DEFAULT}" = 'true' ]; then
         docker tag "${REPOSITORY}:${VARIANT}" "${REPOSITORY}:${CI_JOB_NAME}";
       fi
+    - if [ "${LATEST}" = 'true' ]; then
+        docker tag "${REPOSITORY}:${VARIANT}" "${REPOSITORY}:latest";
+      fi
     - docker images
-    - docker push "${REPOSITORY}"
+    - if [ "${CI_COMMIT_REF_NAME}" = 'master' ]; then
+        docker push "${REPOSITORY}";
+      fi
   after_script:
     - docker logout
 
@@ -46,4 +51,5 @@ git:
 git-ssh:
   variables:
     DEFAULT: "true"
+    LATEST: "true"
   <<: *build_definition
