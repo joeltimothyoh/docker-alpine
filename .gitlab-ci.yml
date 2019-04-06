@@ -29,7 +29,9 @@ variables:
         docker tag "${REPOSITORY}:${VARIANT}" "${REPOSITORY}:${CI_JOB_NAME}";
       fi
     - docker images
-    - docker push "${REPOSITORY}"
+    - if [ "${CI_COMMIT_REF_NAME}" = 'master' ]; then
+        docker push "${REPOSITORY}";
+      fi
   after_script:
     - docker logout
 
