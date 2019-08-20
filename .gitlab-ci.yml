@@ -58,3 +58,8 @@ iptables:
   variables:
     DEFAULT: "true"
   <<: *build_definition
+
+curl-iptables:
+  variables:
+    DEFAULT: "true"
+  <<: *build_definition
