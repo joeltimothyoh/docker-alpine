@@ -43,6 +43,11 @@ curl:
     DEFAULT: "true"
   <<: *build_definition
 
+curl-iptables:
+  variables:
+    DEFAULT: "true"
+  <<: *build_definition
+
 git:
   variables:
     DEFAULT: "true"
@@ -52,4 +57,9 @@ git-ssh:
   variables:
     DEFAULT: "true"
     LATEST: "true"
+  <<: *build_definition
+
+iptables:
+  variables:
+    DEFAULT: "true"
   <<: *build_definition
