@@ -53,3 +53,8 @@ git-ssh:
     DEFAULT: "true"
     LATEST: "true"
   <<: *build_definition
+
+iptables:
+  variables:
+    DEFAULT: "true"
+  <<: *build_definition
