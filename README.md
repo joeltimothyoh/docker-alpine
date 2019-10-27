@@ -1,17 +1,16 @@
-# docker-alpine [![pipeline-default-badge][]][pipeline-default-link]
+# docker-alpine
 
-[pipeline-default-badge]: https://gitlab.com/joeltimothyoh/docker-alpine/badges/master/pipeline.svg
-[pipeline-default-link]: https://gitlab.com/joeltimothyoh/docker-alpine/commits/master
+ [![badge-build-github-workflows-img][]][badge-build-github-workflows-src] [![badge-size-microbadger-size-tag-img][]][badge-size-microbadger-size-tag-src] [![badge-size-microbadger-layers-tag-img][]][badge-size-microbadger-layers-tag-src]
 
-Docker images with tools based on Alpine linux.
+[badge-build-github-workflows-img]: https://github.com/joeltimothyoh/docker-alpine/workflows/build/badge.svg
+[badge-build-github-workflows-src]: https://github.com/joeltimothyoh/docker-alpine/actions
+[badge-size-microbadger-size-tag-img]: https://img.shields.io/microbadger/image-size/joeltimothyoh/alpine/latest
+[badge-size-microbadger-size-tag-src]: https://microbadger.com/images/joeltimothyoh/alpine
+[badge-size-microbadger-layers-tag-img]: https://img.shields.io/microbadger/layers/joeltimothyoh/alpine/latest
+[badge-size-microbadger-layers-tag-src]: https://microbadger.com/images/joeltimothyoh/alpine
+[badge-custom-dockerhub-repo-img]: https://img.shields.io/badge/docker%20hub-joeltimothyoh/alpine-blue.svg?logo=docker&logoColor=2596EC&color=0D597F&label=&labelColor=&style=popout-square
+[badge-custom-dockerhub-repo-src]: https://hub.docker.com/r/joeltimothyoh/alpine
 
-[![alpine-version-badge][]][alpine-metadata-link] [![alpine-layers-badge][]][alpine-metadata-link]
+Docker images with tools, based on [Alpine Linux](https://hub.docker.com/_/alpine).
 
-[alpine-version-badge]: https://images.microbadger.com/badges/version/joeltimothyoh/alpine.svg
-[alpine-layers-badge]: https://images.microbadger.com/badges/image/joeltimothyoh/alpine.svg
-[alpine-metadata-link]: https://microbadger.com/images/joeltimothyoh/alpine
-
-[![alpine-dockerhub-badge][]][alpine-dockerhub-link]
-
-[alpine-dockerhub-badge]: https://img.shields.io/badge/docker%20hub-joeltimothyoh/alpine-blue.svg?logo=docker&logoColor=2596EC&color=0D597F&label=&labelColor=&style=popout-square
-[alpine-dockerhub-link]: https://hub.docker.com/r/joeltimothyoh/alpine
+[![badge-custom-dockerhub-repo-img][]][badge-custom-dockerhub-repo-src]
