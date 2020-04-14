@@ -15,12 +15,12 @@ jobs:
     runs-on: ubuntu-18.04
     strategy:
       matrix:
-        OS_VARIANT: [3.8]
+        OS_VARIANT: [3.8.5]
         TOOL_VARIANT: [curl, curl-iptables, git, git-ssh, iptables]
         include:
-        - OS_VARIANT: 3.8
+        - OS_VARIANT: 3.8.5
           TAG_TOOL: true
-        - OS_VARIANT: 3.8
+        - OS_VARIANT: 3.8.5
           TOOL_VARIANT: git-ssh
           TAG_LATEST: true
     env:
@@ -88,5 +88,5 @@ jobs:
       if: startsWith(github.ref, 'refs/tags/')
       run: docker push "${BUILD_REGISTRY_NAMESPACE}/${BUILD_IMAGE_NAME}"
     - name: Clean-up
-      run: docker logout
       if: always()
+      run: docker logout
