@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        OS_VARIANT: [3.8, 3.9, '3.10', '3.11', '3.12', '3.13', '3.14', '3.15', '3.16']
+        OS_VARIANT: ['3.11', '3.12', '3.13', '3.14', '3.15', '3.16']
         TOOL_VARIANT: [curl, curl-iptables, git, git-ssh, iptables]
         include:
         - OS_VARIANT: 3.14
