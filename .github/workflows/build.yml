@@ -31,7 +31,7 @@ jobs:
       BASE_REGISTRY_NAMESPACE: library
       BASE_IMAGE_NAME: alpine
       BASE_TAG_FULL: ${{ matrix.OS_VARIANT }}
-      BUILD_REGISTRY_NAMESPACE: joeltimothyoh
+      BUILD_REGISTRY_NAMESPACE: ${{ vars.DOCKERHUB_REGISTRY_USER }}
       BUILD_IMAGE_NAME: alpine
       BUILD_TAG_FULL: ${{ matrix.OS_VARIANT }}-${{ matrix.TOOL_VARIANT }}
       BUILD_CONTEXT: variants/${{ matrix.TOOL_VARIANT }}
@@ -101,7 +101,7 @@ jobs:
       with:
         username: ${{ vars.DOCKERHUB_REGISTRY_USER }}
         password: ${{ secrets.DOCKERHUB_REGISTRY_PASSWORD }}
-        repository: joeltimothyoh/alpine
+        repository: ${{ vars.DOCKERHUB_REGISTRY_USER }}/alpine
         short-description: ${{ github.event.repository.description }}
         readme-filepath: README.md
       env:
