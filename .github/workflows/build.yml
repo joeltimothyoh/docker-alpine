@@ -36,7 +36,7 @@ jobs:
       BUILD_TAG_FULL: ${{ matrix.OS_VARIANT }}-${{ matrix.TOOL_VARIANT }}
       BUILD_CONTEXT: variants/${{ matrix.TOOL_VARIANT }}
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
     - name: Display system info (linux)
       run: |
         set -e
