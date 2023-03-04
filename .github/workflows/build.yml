@@ -92,7 +92,7 @@ jobs:
       run: docker logout
 
   update-draft-release:
-    needs: [alpine, ubuntu]
+    needs: alpine
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
@@ -104,7 +104,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   publish-draft-release:
-    needs: [alpine, ubuntu]
+    needs: alpine
     if: startsWith(github.ref, 'refs/tags/')
     runs-on: ubuntu-latest
     steps:
