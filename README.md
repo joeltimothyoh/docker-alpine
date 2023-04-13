@@ -10,6 +10,6 @@
 [badge-image-dockerhub-size-badge]: https://img.shields.io/docker/image-size/joeltimothyoh/alpine/latest?style=flat-square
 [badge-custom-dockerhub-repo-img]: https://img.shields.io/badge/docker%20hub-joeltimothyoh/alpine-blue.svg?logo=docker&logoColor=2596EC&color=0D597F&label=&labelColor=&style=popout-square
 
-Docker images with tools, based on [Alpine Linux](https://hub.docker.com/_/alpine).
+Dockerized [Alpine Linux](https://hub.docker.com/_/alpine) with tools.
 
 [![badge-custom-dockerhub-repo-img][]][badge-image-dockerhub-src]
